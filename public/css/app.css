@@ -10,8 +10,15 @@
     --black: #000000;
     --white: #ffffff;
 
+    --nav-bar-height: 100px;
     --body-padding-horizontal: 2em;
     --rounded-edges: 15px;
+
+    /* Animation units */
+    --slide-distance-width: 2.5vw;
+    --slide-distance-height: 2.5vh;
+    --anim-duration: 1s;
+    --anim-duration-secondary: 1.5s;
 }
 
 /* Animations */
@@ -157,6 +164,10 @@ h6 {
     letter-spacing: 1px;
 }
 
+.bold {
+    font-weight: 700;
+}
+
 button,
 .btn {
     padding: 1.15em 2.25em;
@@ -172,7 +183,8 @@ button,
     background-color: var(--copper);
     color: white;
 }
-.btn-1:hover {
+.btn-1:hover,
+.btn-1:active {
     background-color: var(--peach);
 }
 
@@ -181,7 +193,8 @@ button,
     border: 1px solid black;
     color: black;
 }
-.btn-2:hover {
+.btn-2:hover,
+.btn-2:active {
     background-color: black;
     color: white;
 }
@@ -190,7 +203,12 @@ button,
     background-color: transparent;
     color: black;
 }
-.btn-3:hover {
+.btn-3::after {
+    content: url("../assets/shared/icon-arrow-right.svg");
+    display: inline-block;
+}
+.btn-3:hover,
+.btn-3:active {
     color: var(--copper);
 }
 
@@ -208,7 +226,7 @@ footer {
 }
 
 header {
-    height: 100px;
+    height: var(--nav-bar-height);
     box-sizing: border-box;
     padding: 0 2em;
 
@@ -226,6 +244,69 @@ header {
     height: 100%;
 }
 
+#nav-toggle {
+    cursor: pointer;
+}
+#nav-list-mobile,
+.category-link {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#nav-list-mobile {
+    position: absolute;
+    left: -100%;
+
+    background-color: white;
+
+    width: 100%;
+    z-index: 2;
+    padding: 5em var(--body-padding-horizontal) 2em
+        var(--body-padding-horizontal);
+    box-sizing: border-box;
+    gap: 6em;
+
+    list-style: none;
+
+    transition: left 0.4s;
+}
+.nav-list-visible {
+    left: 0 !important;
+}
+
+.category-link {
+    width: 100%;
+    border-radius: var(--rounded-edges);
+    background-color: var(--light-grey);
+    color: black;
+    text-transform: uppercase;
+    font-weight: 700;
+    padding-bottom: 1.5em;
+    max-height: 165px;
+}
+
+.category-img {
+    position: relative;
+    bottom: 4em;
+    z-index: 3;
+    width: 50%;
+}
+.category-name {
+    margin-top: -5em;
+}
+.shop-link {
+    display: inline-flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.5em;
+    margin-top: 1em;
+    color: var(--medium-grey);
+}
+.category-link:hover .shop-link,
+.category-link:active .shop-link {
+    color: var(--copper);
+}
 .best-gear {
     margin: 0 var(--body-padding-horizontal);
     text-align: center;

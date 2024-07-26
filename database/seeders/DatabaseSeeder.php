@@ -23,20 +23,21 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
-        $earphoneCat = new Category;
-        $earphoneCat->name = "earphones";
-        $earphoneCat->preview_url = "shared/desktop/image-category-thumbnail-earphones.png";
-        $earphoneCat->save();
 
         $headphoneCat = new Category;
         $headphoneCat->name = "headphones";
-        $headphoneCat->preview_url = "shared/desktop/image-category-thumbnail-headphones.png";
+        $headphoneCat->preview_url = "assets/shared/image-category-thumbnail-headphones.png";
         $headphoneCat->save();
 
         $speakerCat = new Category;
         $speakerCat->name = "speakers";
-        $speakerCat->preview_url = "shared/desktop/image-category-thumbnail-speakers.png";
+        $speakerCat->preview_url = "assets/shared/image-category-thumbnail-speakers.png";
         $speakerCat->save();
+
+        $earphoneCat = new Category;
+        $earphoneCat->name = "earphones";
+        $earphoneCat->preview_url = "assets/shared/image-category-thumbnail-earphones.png";
+        $earphoneCat->save();
 
         $yx1 = new Product;
         $yx1->slug = "yx1-earphones";
@@ -56,24 +57,24 @@ class DatabaseSeeder extends Seeder
             new Accessory(['name' => 'Travel pouch', 'quantity' => 1]),
         ]);
         $yx1->images()->saveMany([
-            new ProductImage(['url' => 'products/product-yx1-earphones/mobile/image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-yx1-earphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-yx1-earphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
-            new ProductImage(['url' => 'products/product-yx1-earphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-yx1-earphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-yx1-earphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/mobile/image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
 
-            new ProductImage(['url' => 'products/product-yx1-earphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-yx1-earphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-yx1-earphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
 
-            new ProductImage(['url' => 'products/product-yx1-earphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-yx1-earphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-yx1-earphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
 
-            new ProductImage(['url' => 'products/product-yx1-earphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-yx1-earphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-yx1-earphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
         ]);
 
         $xx59 = new Product;
@@ -128,26 +129,26 @@ class DatabaseSeeder extends Seeder
         ]);
         $xx99->images()->saveMany([
             // Main
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/mobile/
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/mobile/
             image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
             // Preview
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
             // Gallery 1
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
             // Gallery 2
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
             // Gallery 3
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
         ]);
 
         $xx59->accessories()->saveMany([
@@ -157,24 +158,24 @@ class DatabaseSeeder extends Seeder
             new Accessory(['name' => '3.5mm 5m audio cable', 'quantity' => 1]),
         ]);
         $xx59->images()->saveMany([
-            new ProductImage(['url' => 'products/product-xx59-headphones/mobile/image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-xx59-headphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-xx59-headphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
-            new ProductImage(['url' => 'products/product-xx59-headphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-xx59-headphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-xx59-headphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/mobile/image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
 
-            new ProductImage(['url' => 'products/product-xx59-headphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-xx59-headphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-xx59-headphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
 
-            new ProductImage(['url' => 'products/product-xx59-headphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-xx59-headphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-xx59-headphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
 
-            new ProductImage(['url' => 'products/product-xx59-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-xx59-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-xx59-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
         ]);
 
         $xx992->accessories()->saveMany([
@@ -186,26 +187,26 @@ class DatabaseSeeder extends Seeder
         ]);
         $xx992->images()->saveMany([
             // Main
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/mobile/
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/mobile/
             image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
             // Preview
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
             // Gallery 1
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
             // Gallery 2
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
             // Gallery 3
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
         ]);
 
         $zx7->accessories()->saveMany([
@@ -217,26 +218,26 @@ class DatabaseSeeder extends Seeder
         ]);
         $zx7->images()->saveMany([
             // Main
-            new ProductImage(['url' => 'products/product-zx7-speaker/mobile/
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/mobile/
             image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-zx7-speaker/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-zx7-speaker/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
             // Preview
-            new ProductImage(['url' => 'products/product-zx7-speaker/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-zx7-speaker/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-zx7-speaker/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
             // Gallery 1
-            new ProductImage(['url' => 'products/product-zx7-speaker/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-zx7-speaker/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-zx7-speaker/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
             // Gallery 2
-            new ProductImage(['url' => 'products/product-zx7-speaker/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-zx7-speaker/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-zx7-speaker/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
             // Gallery 3
-            new ProductImage(['url' => 'products/product-zx7-speaker/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-zx7-speaker/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-zx7-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
         ]);
 
         $zx9->accessories()->saveMany([
@@ -248,26 +249,26 @@ class DatabaseSeeder extends Seeder
         ]);
         $zx9->images()->saveMany([
             // Main
-            new ProductImage(['url' => 'products/product-zx9-speaker/mobile/
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/mobile/
             image-product.jpg', 'type' => 'main', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-zx9-speaker/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-zx9-speaker/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/tablet/image-product.jpg', 'type' => 'main', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/desktop/image-product.jpg', 'type' => 'main', 'device' => 'desktop']),
             // Preview
-            new ProductImage(['url' => 'products/product-zx9-speaker/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
-            new ProductImage(['url' => 'products/product-zx9-speaker/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
-            new ProductImage(['url' => 'products/product-zx9-speaker/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/mobile/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'mobile']),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/tablet/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'tablet']),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/desktop/image-category-page-preview.jpg', 'type' => 'preview', 'device' => 'desktop']),
             // Gallery 1
-            new ProductImage(['url' => 'products/product-zx9-speaker/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-zx9-speaker/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
-            new ProductImage(['url' => 'products/product-zx9-speaker/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/mobile/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/tablet/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 1]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/desktop/image-gallery-1.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 1]),
             // Gallery 2
-            new ProductImage(['url' => 'products/product-zx9-speaker/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-zx9-speaker/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
-            new ProductImage(['url' => 'products/product-zx9-speaker/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/mobile/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/tablet/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 2]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/desktop/image-gallery-2.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 2]),
             // Gallery 3
-            new ProductImage(['url' => 'products/product-zx9-speaker/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-zx9-speaker/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'products/product-zx9-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
         ]);
     }
 }
