@@ -12,6 +12,5 @@ class AccessorySeeder extends Seeder
      */
     public function run(): void
     {
-        //
     }
 }

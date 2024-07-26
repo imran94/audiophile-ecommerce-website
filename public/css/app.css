@@ -1,0 +1,296 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200..700&display=swap");
+
+:root {
+    --copper: #d87d4a;
+    --peach: #fbaf85;
+    --light-grey: #f1f1f1;
+    --pale-grey: #fafafa;
+    --medium-grey: #878787;
+
+    --black: #000000;
+    --white: #ffffff;
+
+    --body-padding-horizontal: 2em;
+    --rounded-edges: 15px;
+}
+
+/* Animations */
+@keyframes slideLeft {
+    from {
+        translate: var(--slide-distance-width) 0;
+    }
+
+    to {
+        translate: 0 0;
+    }
+}
+
+@keyframes slideRight {
+    from {
+        translate: calc(var(--slide-distance-width) * -1) 0;
+    }
+
+    to {
+        translate: 0 0;
+    }
+}
+
+@keyframes slideUp {
+    from {
+        transform: translateY(var(--slide-distance-height));
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(calc(var(--slide-distance-height) * -1));
+    }
+
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+html {
+    font-family: "Manrope", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
+    font-size: 15px;
+    line-height: 25px;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.overline,
+.subtitle {
+    text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.subtitle {
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 56px;
+    line-height: 58px;
+    letter-spacing: 2px;
+}
+
+h2 {
+    font-size: 40px;
+    line-height: 44px;
+    letter-spacing: 1.5px;
+}
+
+h3 {
+    font-size: 32px;
+    line-height: 36px;
+    letter-spacing: 1.15px;
+}
+
+h4 {
+    font-size: 28px;
+    line-height: 38px;
+    letter-spacing: 2px;
+}
+
+h5 {
+    font-size: 24px;
+    line-height: 33px;
+    letter-spacing: 1.7px;
+}
+
+h6 {
+    font-size: 18px;
+    line-height: 24px;
+    letter-spacing: 1.3px;
+}
+
+.overline,
+.subtitle {
+    color: var(--copper);
+}
+
+.overline {
+    font-size: 14px;
+    line-height: 19px;
+    letter-spacing: 10px;
+}
+
+.subtitle {
+    font-size: 13px;
+    line-height: 25px;
+    letter-spacing: 1px;
+}
+
+button,
+.btn {
+    padding: 1.15em 2.25em;
+    border: none;
+
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.btn-1 {
+    background-color: var(--copper);
+    color: white;
+}
+.btn-1:hover {
+    background-color: var(--peach);
+}
+
+.btn-2 {
+    background-color: white;
+    border: 1px solid black;
+    color: black;
+}
+.btn-2:hover {
+    background-color: black;
+    color: white;
+}
+
+.btn-3 {
+    background-color: transparent;
+    color: black;
+}
+.btn-3:hover {
+    color: var(--copper);
+}
+
+.tablet,
+.desktop {
+    display: none;
+}
+
+header,
+footer {
+    width: 100%;
+    background-color: black;
+    color: white;
+    box-sizing: border-box;
+}
+
+header {
+    height: 100px;
+    box-sizing: border-box;
+    padding: 0 2em;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    height: 100%;
+}
+
+.best-gear {
+    margin: 0 var(--body-padding-horizontal);
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* gap: 1em; */
+}
+.best-gear .copper {
+    color: var(--copper);
+}
+.best-gear-img {
+    width: 100%;
+    border-radius: var(--rounded-edges);
+}
+
+footer {
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    gap: 3em;
+    text-align: center;
+
+    margin-top: 10em;
+    padding: 0 var(--body-padding-horizontal) 3em var(--body-padding-horizontal);
+}
+.footer-top-line {
+    background-color: var(--copper);
+    width: 101px;
+    height: 4px;
+    margin-top: 0;
+}
+footer nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.footer-nav-link {
+    text-transform: uppercase;
+    color: white;
+
+    font-size: 13px;
+    font-weight: 700;
+    line-height: 25px;
+    letter-spacing: 2px;
+}
+
+.footer-about,
+.copyright {
+    color: var(--medium-grey);
+}
+.copyright {
+    font-weight: 700;
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1em;
+}
+.social-media-link {
+}

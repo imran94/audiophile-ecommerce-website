@@ -10,6 +10,11 @@ class Accessory extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'quantity',
+        'name'
+    ];
+
     public function product(): BelongsTo
     {
         return $this->belongsTo(Product::class);

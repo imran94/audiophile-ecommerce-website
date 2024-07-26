@@ -14,7 +14,7 @@ return new class extends Migration
     {
         Schema::create('accessories', function (Blueprint $table) {
             $table->id();
-            $table->smallInteger('quantity');
+            $table->smallInteger('quantity')->default(1);
             $table->string('name');
             $table->foreignIdFor(Product::class)
                 ->constrained()
