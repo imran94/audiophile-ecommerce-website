@@ -17,23 +17,18 @@
         <a class="logo-link" href="/">
             <img class="logo-img" src="{{ url('assets/shared/logo.svg') }}" />
         </a>
+        <nav id="nav-list">
+            <a class="nav-link" href="#">home</a>
+            <a class="nav-link" href="#">headphones</a>
+            <a class="nav-link" href="#">speakers</a>
+            <a class="nav-link" href="#">earphones</a>
+        </nav>
         <img src="{{ url('assets/shared/icon-cart.svg') }}" />
 
-
+        <nav id="nav-list-mobile">
+            <x-category-list />
+        </nav>
     </header>
-
-    <nav id="nav-list-mobile">
-        @foreach ($categories as $cat)
-            <a href="#" class="category-link">
-                <img class="category-img" src="{{ url($cat->preview_url) }}" />
-                <div class="category-name bold">{{ $cat->name }}</div>
-                <div class="shop-link">
-                    <span class="shop-text">shop</span>
-                    <img src="{{ url('assets/shared/icon-arrow-right.svg') }}" />
-                </div>
-            </a>
-        @endforeach
-    </nav>
 
     <main>
         {{ $slot }}
@@ -43,14 +38,22 @@
             <img class="best-gear-img tablet" src="{{ url('assets/shared/tablet/image-best-gear.jpg') }}" />
             <img class="best-gear-img desktop" src="{{ url('assets/shared/desktop/image-best-gear.jpg') }}" />
 
-            <h4 class="best-gear-heading">Bringing you the <span class="copper">best</span> audio gear</h4>
-            <div class="best-gear-paragraph">
-                Located at the heart of New York City, Audiophile is the premier store for high end headphones,
-                earphones,
-                speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available for
-                you
-                to browse and experience a wide range of our products. Stop by our store to meet some of the fantastic
-                people who make Audiophile the best place to buy your portable audio equipment.
+
+            <div class="best-gear-text">
+                <h4 class="best-gear-heading mobile">Bringing you the <span class="copper">best</span> audio gear</h4>
+                <h2 class="best-gear-heading tablet desktop">Bringing you the <span class="copper">best</span> audio
+                    gear
+                </h2>
+                <div class="best-gear-paragraph">
+                    Located at the heart of New York City, Audiophile is the premier store for high end headphones,
+                    earphones,
+                    speakers, and audio accessories. We have a large showroom and luxury demonstration rooms available
+                    for
+                    you
+                    to browse and experience a wide range of our products. Stop by our store to meet some of the
+                    fantastic
+                    people who make Audiophile the best place to buy your portable audio equipment.
+                </div>
             </div>
         </div>
     </main>
@@ -61,11 +64,11 @@
             <img class="logo-img" src="{{ url('assets/shared/logo.svg') }}" />
         </a>
 
-        <nav>
-            <a class="footer-nav-link" href="#">home</a>
-            <a class="footer-nav-link" href="#">headphones</a>
-            <a class="footer-nav-link" href="#">speakers</a>
-            <a class="footer-nav-link" href="#">earphones</a>
+        <nav class="footer-nav">
+            <a class="nav-link" href="#">home</a>
+            <a class="nav-link" href="#">headphones</a>
+            <a class="nav-link" href="#">speakers</a>
+            <a class="nav-link" href="#">earphones</a>
         </nav>
 
         <div class="footer-about">
@@ -87,7 +90,7 @@
 </html>
 <script>
     const toggleNavBar = () => {
-        console.log('toggleNavBar');
+        // document.body.classList.toggle("noscroll");
         document.querySelector("#nav-list-mobile")
             .classList.toggle("nav-list-visible");
     };
