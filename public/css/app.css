@@ -13,7 +13,7 @@
     --white: #ffffff;
 
     --nav-bar-height: 100px;
-    --body-padding-hor: 1em;
+    --body-padding-hor: 1.5em;
     --rounded-edges: 7px;
 
     /* Animation units */
@@ -134,9 +134,9 @@ h1 {
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 28px;
     line-height: 44px;
-    letter-spacing: 1.5px;
+    letter-spacing: 1px;
 }
 
 h3 {
@@ -402,6 +402,11 @@ footer {
         font-size: 56px;
         line-height: 58px;
         letter-spacing: 2px;
+    }
+    h2 {
+        font-size: 40px;
+        line-height: 44px;
+        letter-spacing: 1.5px;
     }
 
     .mobile {

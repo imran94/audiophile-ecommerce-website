@@ -102,7 +102,7 @@
 
 <div class="category-list">
     @foreach ($categories as $cat)
-        <a href="#" class="category-link">
+        <a href="{{ route('category', ['slug' => $cat->slug]) }}" class="category-link">
             <img class="category-img" src="{{ url($cat->preview_url) }}" />
             <div class="category-name bold">{{ $cat->name }}</div>
             <div class="shop-link">

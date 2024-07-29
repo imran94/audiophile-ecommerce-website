@@ -8,7 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="{{ url('favicon-32x32.png') }}">
     <link href="{{ url('css/app.css') }}" rel="stylesheet" />
 
-    <title>{{ $title ?? 'Audiophile' }}</title>
+    <title>{{ ucwords($title) }}</title>
 </head>
 
 <body>
@@ -18,10 +18,10 @@
             <img class="logo-img" src="{{ url('assets/shared/logo.svg') }}" />
         </a>
         <nav id="nav-list">
-            <a class="nav-link" href="#">home</a>
-            <a class="nav-link" href="#">headphones</a>
-            <a class="nav-link" href="#">speakers</a>
-            <a class="nav-link" href="#">earphones</a>
+            <a class="nav-link" href="/">home</a>
+            @foreach ($categories as $cat)
+                <a class="nav-link" href="{{ route('category', ['slug' => $cat->slug]) }}">{{ $cat->name }}</a>
+            @endforeach
         </nav>
         <img src="{{ url('assets/shared/icon-cart.svg') }}" />
 
@@ -33,6 +33,10 @@
     <main>
         {{ $slot }}
 
+        @unless ($noCategoryList)
+            <x-category-list />
+        @endunless
+
         <div class="best-gear">
             <img class="best-gear-img mobile" src="{{ url('assets/shared/mobile/image-best-gear.jpg') }}" />
             <img class="best-gear-img tablet" src="{{ url('assets/shared/tablet/image-best-gear.jpg') }}" />
@@ -40,10 +44,7 @@
 
 
             <div class="best-gear-text">
-                <h4 class="best-gear-heading mobile">Bringing you the <span class="copper">best</span> audio gear</h4>
-                <h2 class="best-gear-heading tablet desktop">Bringing you the <span class="copper">best</span> audio
-                    gear
-                </h2>
+                <h2 class="best-gear-heading">Bringing you the <span class="copper">best</span> audio gear</h2>
                 <div class="best-gear-paragraph">
                     Located at the heart of New York City, Audiophile is the premier store for high end headphones,
                     earphones,

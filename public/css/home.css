@@ -13,7 +13,7 @@
 
     background-image: url(../assets/home/mobile/image-header.jpg);
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: left top;
     background-size: 100%;
 
     text-align: center;
@@ -158,12 +158,15 @@
 
 @media screen and (min-width: 1024px) {
     #new-product {
-        height: 820px;
+        min-height: 810px;
+        /* height: auto; */
         align-items: flex-start;
         justify-content: center;
         text-align: start;
 
         background-image: url(../assets/home/desktop/image-hero.jpg);
+        /* background-position: left top;
+        background-size: cover; */
     }
     #new-product > * {
         margin: 0;

@@ -24,18 +24,22 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
-        $headphoneCat = new Category;
-        $headphoneCat->name = "headphones";
-        $headphoneCat->preview_url = "assets/shared/image-category-thumbnail-headphones.png";
+        $headphoneCat = new Category([
+            'name' => "Headphones",
+            'slug' => 'headphones',
+            'preview_url' => "assets/shared/image-category-thumbnail-headphones.png"
+        ]);
         $headphoneCat->save();
 
         $speakerCat = new Category;
-        $speakerCat->name = "speakers";
+        $speakerCat->name = "Speakers";
+        $speakerCat->slug = "speakers";
         $speakerCat->preview_url = "assets/shared/image-category-thumbnail-speakers.png";
         $speakerCat->save();
 
         $earphoneCat = new Category;
-        $earphoneCat->name = "earphones";
+        $earphoneCat->name = "Earphones";
+        $earphoneCat->slug = "earphones";
         $earphoneCat->preview_url = "assets/shared/image-category-thumbnail-earphones.png";
         $earphoneCat->save();
 

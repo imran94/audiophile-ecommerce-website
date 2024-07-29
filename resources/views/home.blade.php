@@ -1,4 +1,4 @@
-<x-base-layout>
+<x-base-layout :noCategoryList="true">
 
     <link href="{{ url('css/home.css') }}" rel="stylesheet" />
 
