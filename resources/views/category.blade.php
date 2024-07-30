@@ -1,4 +1,4 @@
-<x-base-layout title="Audiophile | {{ $category->name }}'">
+<x-base-layout title="Audiophile | {{ $category?->name }}">
     <link href="{{ url('css/category.css') }}" rel="stylesheet" />
 
     <div class="category-heading-block">

@@ -10,11 +10,20 @@ class ProductController extends Controller
     public function show(string $slug)
     {
         $product = Product::where('slug', $slug)->first();
-        return view('category', [
+        $others = Product::inRandomOrder()->where('id', '!=', 1)->limit(3)->get();
+        foreach ($others as $other) {
+            $other->previewUrl = $other
+                ->images()
+                ->where([
+                    'type' => 'preview',
+                    'device' => 'mobile'
+                ])->first()->url;
+        }
+        return view('product', [
             'product' => $product,
             'mainImages' => $product->images()->where(['type' => 'main'])->get(),
             'galleryImages' => $product->images()->where(['type' => 'gallery'])->orderBy('sequence')->get(),
-            'others' => Product::inRandomOrder()->where('id', '!=', 1)->limit(3)->get()
+            'others' => $others
         ]);
     }
 }

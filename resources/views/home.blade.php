@@ -8,7 +8,9 @@
         <div class="new-product-desc">
             Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
         </div>
-        <a href="#" class="new-product-btn btn btn-1">see product</a>
+        <a href="{{ route('product', ['slug' => 'xx99-mark-two-headphones']) }}" class="new-product-btn btn btn-1">
+            see product
+        </a>
     </div>
 
     <x-category-list />
@@ -24,11 +26,11 @@
                 Upgrade to premium speakers that are phenomenally built to deliver truly remarkable
                 sound.
             </div>
-            <a href="#" class="btn btn-4">see product</a>
+            <a href="{{ route('product', ['slug' => 'zx9-speaker']) }}" class="btn btn-4">see product</a>
         </div>
         <div id="zx7-speaker">
             <h4 class="product-name">zx7 speaker</h4>
-            <a href="#" class="btn btn-2">see product</a>
+            <a href="{{ route('product', ['slug' => 'zx7-speaker']) }}" class="btn btn-2">see product</a>
         </div>
         <div id="yx1-earphones">
             <img class="product-img mobile" src="{{ url('assets/home/mobile/image-earphones-yx1.jpg') }}" />
@@ -37,7 +39,7 @@
 
             <div class="product-info">
                 <h4 class="product-name">yx1 earphones</h4>
-                <a href="#" class="btn btn-2">see product</a>
+                <a href="{{ route('product', ['slug' => 'yx1-earphones']) }}" class="btn btn-2">see product</a>
             </div>
         </div>
     </div>

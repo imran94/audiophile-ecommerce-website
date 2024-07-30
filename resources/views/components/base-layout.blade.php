@@ -31,6 +31,7 @@
     </header>
 
     <main>
+        <div id="overlay"></div>
         {{ $slot }}
 
         @unless ($noCategoryList)
@@ -66,10 +67,12 @@
         </a>
 
         <nav class="footer-nav">
-            <a class="nav-link" href="#">home</a>
-            <a class="nav-link" href="#">headphones</a>
-            <a class="nav-link" href="#">speakers</a>
-            <a class="nav-link" href="#">earphones</a>
+            <a class="nav-link" href="/">home</a>
+            @foreach ($categories as $cat)
+                <a class="nav-link" href="{{ route('category', ['slug' => $cat->slug]) }}">
+                    {{ $cat->name }}
+                </a>
+            @endforeach
         </nav>
 
         <div class="footer-about">
@@ -91,8 +94,13 @@
 </html>
 <script>
     const toggleNavBar = () => {
-        // document.body.classList.toggle("noscroll");
+        document.body.classList.toggle("noscroll");
         document.querySelector("#nav-list-mobile")
             .classList.toggle("nav-list-visible");
+        const overlay = document.getElementById("overlay")
+        if (overlay.style.display === "block")
+            overlay.style.display = "none";
+        else
+            overlay.style.display = "block";
     };
 </script>

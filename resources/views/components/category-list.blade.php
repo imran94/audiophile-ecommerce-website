@@ -51,7 +51,10 @@
 
     @media screen and (min-width: 600px) {
         .category-list {
-            flex-direction: row;
+            /* flex-direction: row; */
+            width: 100%;
+            display: grid;
+            grid-template: auto / repeat(3, 1fr);
             justify-content: space-between;
             gap: 1em;
         }
@@ -83,7 +86,8 @@
     @media screen and (min-width: 1024px) {
 
         .category-list {
-            width: calc(100% - var(--body-padding-hor) * 2);
+            /* width: calc(100% - var(--body-padding-hor) * 2); */
+            gap: 0;
         }
 
         .category-name {
