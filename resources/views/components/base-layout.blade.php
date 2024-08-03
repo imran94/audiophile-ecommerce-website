@@ -450,7 +450,8 @@
         if (!checkoutDialog) {
             return
         }
-        toggleBackground()
+        document.body.classList.toggle("noscroll");
+        document.querySelector("#overlay").style.display = "block";
         checkoutDialog.style.display = 'grid'
 
         document.querySelector('#pay-loading-bar').style.display = 'none';
