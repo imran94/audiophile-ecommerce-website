@@ -1,14 +1,11 @@
 const startAnimation = (entries, observer) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
-            console.log(entry.target);
             if (!entry.target.classList.contains("animate")) {
                 entry.target.classList.add("animate");
             }
             observer.unobserve(entry.target);
         }
-        // if (entry.target.classList.contains)
-        //     entry.target.classList.toggle("animate", entry.isIntersecting);
     });
 };
 
