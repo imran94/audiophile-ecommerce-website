@@ -1,4 +1,4 @@
-<x-base-layout title="Audiophile | {{ $category?->name }}">
+<x-base-layout title="{{ $category?->name }} | Audiophile">
     <link href="{{ url('css/category.css') }}" rel="stylesheet" />
 
     <div class="category-heading-block">
@@ -18,8 +18,7 @@
                     <h1 class="product-name">{{ $product->name }}</h1>
                     <div class="product-desc">{{ $product->description }}</div>
                     <a href="{{ route('product', ['slug' => $product->slug]) }}" class="product-link btn btn-1">
-                        see
-                        product
+                        see product
                     </a>
                 </div>
             </div>

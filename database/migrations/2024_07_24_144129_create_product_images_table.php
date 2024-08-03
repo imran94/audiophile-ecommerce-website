@@ -15,7 +15,7 @@ return new class extends Migration
         Schema::create('product_images', function (Blueprint $table) {
             $table->id();
             $table->string('url');
-            $table->enum('type', ['preview', 'main', 'gallery'])->nullable();
+            $table->enum('type', ['preview', 'main', 'gallery', 'cart'])->nullable();
             $table->enum('device', ['desktop', 'tablet', 'mobile'])->nullable();
             $table->smallInteger('sequence')->nullable();
             $table->foreignIdFor(Product::class)

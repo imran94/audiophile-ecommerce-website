@@ -18,6 +18,15 @@
 
     text-align: center;
 }
+#new-product.animate {
+    animation-name: fadeIn;
+    animation-duration: var(--anim-duration);
+}
+
+#new-product *.animate {
+    animation-name: fadeIn, slideUp;
+    animation-duration: var(--anim-duration);
+}
 
 #new-product .overline {
     color: var(--medium-grey);
@@ -157,26 +166,6 @@
 }
 
 @media screen and (min-width: 1024px) {
-    #new-product {
-        min-height: 810px;
-        /* height: auto; */
-        align-items: flex-start;
-        justify-content: center;
-        text-align: start;
-
-        background-image: url(../assets/home/desktop/image-hero.jpg);
-        /* background-position: left top;
-        background-size: cover; */
-    }
-    #new-product > * {
-        margin: 0;
-        margin-left: 225px;
-        max-width: 400px;
-    }
-    .new-product-desc {
-        width: 18%;
-    }
-
     #more-products {
         gap: 3em;
     }
@@ -228,5 +217,27 @@
     #yx1-earphones .product-info {
         height: 100%;
         padding-left: 6em;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    #new-product {
+        min-height: 810px;
+        /* height: auto; */
+        align-items: flex-start;
+        justify-content: center;
+        text-align: start;
+
+        background-image: url(../assets/home/desktop/image-hero.jpg);
+        /* background-position: left top;
+        background-size: cover; */
+    }
+    #new-product > * {
+        margin: 0;
+        margin-left: 225px;
+        max-width: 400px;
+    }
+    .new-product-desc {
+        width: 18%;
     }
 }

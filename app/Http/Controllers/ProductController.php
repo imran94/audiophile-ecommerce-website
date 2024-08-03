@@ -10,7 +10,7 @@ class ProductController extends Controller
     public function show(string $slug)
     {
         $product = Product::where('slug', $slug)->first();
-        $others = Product::inRandomOrder()->where('id', '!=', 1)->limit(3)->get();
+        $others = Product::inRandomOrder()->where('id', '!=', $product->id)->limit(3)->get();
         foreach ($others as $other) {
             $other->previewUrl = $other
                 ->images()
@@ -19,6 +19,7 @@ class ProductController extends Controller
                     'device' => 'mobile'
                 ])->first()->url;
         }
+
         return view('product', [
             'product' => $product,
             'mainImages' => $product->images()->where(['type' => 'main'])->get(),

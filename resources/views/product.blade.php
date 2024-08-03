@@ -1,4 +1,4 @@
-<x-base-layout>
+<x-base-layout title="{{ $product->name }} | Audiophile">
 
     <link href="{{ url('css/product.css') }}" rel="stylesheet" />
 
@@ -13,9 +13,18 @@
             <h2 class="product-name">{{ $product->name }}</h2>
             <div class="product-desc">{{ $product->description }}</div>
             <h6 class="product-price">$ {{ number_format($product->price) }}</h6>
-            <form id="product-form">
-                <input type="number" id="product-quantity" name="quantity" />
-                <button type="submit" class="btn btn-1">add to cart</button>
+            <form id="product-form" onsubmit="event.preventDefault(); addToCart({{ $product->id }}, event)">
+                <div class="number-input">
+                    <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepDown();"
+                        class="">-</button>
+                    <input class="quantity" min="1" name="quantity" value="1" type="number" required>
+                    <button type="button" onclick="this.parentNode.querySelector('input[type=number]').stepUp(); "
+                        class="">+</button>
+                </div>
+                <button type="submit" id="add-to-cart-btn" class="btn btn-1">
+                    <img id="add-to-cart-loading-bar" src="{{ url('assets/shared/90-ring-with-bg-white-36.svg') }}" />
+                    <span id="add-to-cart-text">add to cart</span>
+                </button>
             </form>
         </div>
     </div>

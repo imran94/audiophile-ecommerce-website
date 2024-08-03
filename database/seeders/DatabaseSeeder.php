@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\Accessory;
+use App\Models\Cart;
 use App\Models\Category;
 use App\Models\Product;
 use App\Models\ProductImage;
@@ -78,7 +79,9 @@ class DatabaseSeeder extends Seeder
 
             new ProductImage(['url' => 'assets/products/product-yx1-earphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
             new ProductImage(['url' => 'assets/products/product-yx1-earphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'assets/products/product-yx1-earphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-yx1-earphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3]),
+
+            new ProductImage(['url' => 'assets/cart/image-yx1-earphones.jpg', 'type' => 'cart'])
         ]);
 
         $xx59 = new Product;
@@ -151,7 +154,9 @@ class DatabaseSeeder extends Seeder
             // Gallery 3
             new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
             new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-one-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3]),
+
+            new ProductImage(['url' => 'assets/cart/image-xx99-mark-one-headphones.jpg', 'type' => 'cart'])
         ]);
 
         $xx59->accessories()->saveMany([
@@ -178,7 +183,9 @@ class DatabaseSeeder extends Seeder
 
             new ProductImage(['url' => 'assets/products/product-xx59-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
             new ProductImage(['url' => 'assets/products/product-xx59-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'assets/products/product-xx59-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-xx59-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3]),
+
+            new ProductImage(['url' => 'assets/products/image-xx59-headphones.jpg', 'type' => 'cart'])
         ]);
 
         $xx992->accessories()->saveMany([
@@ -208,7 +215,9 @@ class DatabaseSeeder extends Seeder
             // Gallery 3
             new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
             new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-xx99-mark-two-headphones/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3]),
+
+            new ProductImage(['url' => 'assets/products/image-xx99-mark-two-headphones.jpg', 'type' => 'cart'])
         ]);
 
         $zx7->accessories()->saveMany([
@@ -238,7 +247,10 @@ class DatabaseSeeder extends Seeder
             // Gallery 3
             new ProductImage(['url' => 'assets/products/product-zx7-speaker/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
             new ProductImage(['url' => 'assets/products/product-zx7-speaker/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'assets/products/product-zx7-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-zx7-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3]),
+
+            new ProductImage(['url' => 'assets/products/image-zx7-speaker.jpg', 'type' => 'cart'])
+
         ]);
 
         $zx9->accessories()->saveMany([
@@ -268,7 +280,13 @@ class DatabaseSeeder extends Seeder
             // Gallery 3
             new ProductImage(['url' => 'assets/products/product-zx9-speaker/mobile/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'mobile', 'sequence' => 3]),
             new ProductImage(['url' => 'assets/products/product-zx9-speaker/tablet/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'tablet', 'sequence' => 3]),
-            new ProductImage(['url' => 'assets/products/product-zx9-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3])
+            new ProductImage(['url' => 'assets/products/product-zx9-speaker/desktop/image-gallery-3.jpg', 'type' => 'gallery', 'device' => 'desktop', 'sequence' => 3]),
+
+            new ProductImage(['url' => 'assets/products/image-zx9-speaker.jpg', 'type' => 'cart'])
         ]);
+
+        $cart = new Cart;
+        $cart->save();
+        $cart->products()->attach(Product::first()->id, ['quantity' => 5]);
     }
 }
