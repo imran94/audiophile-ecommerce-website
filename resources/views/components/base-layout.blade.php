@@ -14,11 +14,11 @@
 <body>
     <header>
         <img id="nav-toggle" src="{{ url('assets/shared/icon-hamburger.svg') }}" onclick="toggleNavBar()" />
-        <a class="logo-link" href="/">
+        <a class="logo-link" href="{{ route('home') }}">
             <img class="logo-img" src="{{ url('assets/shared/logo.svg') }}" />
         </a>
         <nav id="nav-list">
-            <a class="nav-link" href="/">home</a>
+            <a class="nav-link" href="{{ route('home') }}">home</a>
             @foreach ($categories as $cat)
                 <a class="nav-link" href="{{ route('category', ['slug' => $cat->slug]) }}">{{ $cat->name }}</a>
             @endforeach
@@ -37,24 +37,6 @@
                 <div id="remove-all-button" onclick="removeAll()">Remove all</div>
             </div>
             <div id="cart-overlay-list">
-                {{-- @for ($i = 0; $i < 10; $i++)
-                    <div class="cart-item">
-                        <div class="cart-item-info">
-                            <img class="cart-item-img" src="{{ url('assets/cart/image-zx7-speaker.jpg') }}" />
-                            <div class="cart-item-name">XX99 MARK II HEADPHONES</div>
-                            <div class="cart-item-price">$2,999</div>
-                        </div>
-                        <div class="number-input">
-                            <button type="button"
-                                onclick="this.parentNode.querySelector('input[type=number]').stepDown();"
-                                class="">-</button>
-                            <input class="quantity" min="1" name="quantity" value="1" type="number">
-                            <button type="button"
-                                onclick="this.parentNode.querySelector('input[type=number]').stepUp();"
-                                class="">+</button>
-                        </div>
-                    </div>
-                @endfor --}}
             </div>
             <div id="cart-overlay-footer">
                 <div id="cart-overlay-total-title">TOTAL</div>
@@ -98,12 +80,12 @@
 
     <footer>
         <hr class="footer-top-line" />
-        <a class="logo-link" href="/">
+        <a class="logo-link" href="{{ route('home') }}">
             <img class="logo-img" src="{{ url('assets/shared/logo.svg') }}" />
         </a>
 
         <nav class="footer-nav">
-            <a class="nav-link" href="/">home</a>
+            <a class="nav-link" href="{{ route('home') }}">home</a>
             @foreach ($categories as $cat)
                 <a class="nav-link" href="{{ route('category', ['slug' => $cat->slug]) }}">
                     {{ $cat->name }}
